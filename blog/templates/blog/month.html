@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+	<head>
+{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+	</head>
+<body>
+	<div class="container">
+		<h1>Hey, this is a test page for my month archive</h1>
+		<ul>
+			{% for post in object_list %}
+				<li>{{ post.pub_date|date:"F j, Y" }}: <a href="{% url 'blog:detailtest' post.post_slug %}">{{ post.post_title }}</a></li>
+			{% endfor %}
+		</ul>
+		<p>
+			{% if previous_month %}
+				Previous Month: {{ previous_month|date:"F Y" }}
+			{% endif %}
+		</p>
+		<p>	
+			{% if next_month %}
+				Next Month: {{ next_month|date:"F Y" }}
+			{% endif %}
+		</p>
+	</div>
+</body>

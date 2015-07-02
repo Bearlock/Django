@@ -1,0 +1,17 @@
+li a {
+	color: green;
+}
+
+body {
+	background: white url("images/background.gif") no-repeat;
+	font-family: helvetica;
+}
+
+.container {
+	padding-left: 64px;
+	padding-right: 64px;
+}
+
+.pythonChallenge {
+	color: #ce1212;
+}

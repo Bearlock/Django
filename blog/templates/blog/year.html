@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+	{% include 'blog/head.html' %}
+	{% include 'blog/nav.html' %}
+	<body>
+	<div class="container">
+		<h1>Hey, this is a test page for my year archive</h1>
+		<ul>
+		    {% for date in date_list %}
+		        <li>{{ date|date }}</li>
+		    {% endfor %}
+		</ul>	
+		<div>
+		    <h1>All Posts for {{ year|date:"Y" }}</h1>
+		    {% for post in object_list %}
+		        <p>
+		            <a href="{% url 'blog:detailtest' post.post_slug %}">{{ post.post_title }}</a> - {{ post.pub_date|date:"F j, Y" }}
+		        </p>
+		    {% endfor %}
+		</div>
+	</div>
+</body>

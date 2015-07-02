@@ -1,0 +1,30 @@
+body {
+	background: white;
+	font-family: helvetica;
+	/*url("images/background.gif") no-repeat*/
+}
+
+a:link {
+	color: #db1d1d;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #9c9b9b;
+	text-decoration: none;
+}
+
+.logo {
+	padding-top: 10px; 
+	padding-bottom: 15px;
+}
+.nav-div {
+	padding-top: 20px;
+}
+.container {
+	padding-left: 64px;
+	padding-right: 64px;
+}
+.link {
+	margin-right:5px;
+}

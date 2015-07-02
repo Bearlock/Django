@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+	{% include 'blog/head.html' %}
+	{% if latest_post_list %}
+	{% include 'blog/nav.html' %}
+	<body>
+		<div class="container">
+			<h1>Hey, this is a test page for my blog app</h1>
+			{% for post in latest_post_list %}
+			<h1 class="postTitle">{{ post.post_title }}</h1>
+			<div class="postContent">
+				"{{ post.post_content|striptags|slice:":100" }} . . ." <a href="{% url 'blog:detailtest' post.post_slug %}">Read more →</a>
+					<!--- {{ post.post_content|safe }} for actual content -->
+			</div>
+			{% endfor %}
+			{% include 'blog/buttons.html' %}
+		</div>
+	</body>
+</html>
+	{% else %}
+	<p>No blog posts are available.</p>
+	{% endif %}

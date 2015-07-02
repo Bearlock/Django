@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+	{% include 'blog/head.html' %}
+	<header>
+	<div class="logo container">This is a logo</div>
+		<div class="nav-div container">
+			<nav>
+				<a class="link" href="/">Home</a>
+				<a class="link" href="/blog">Blog</a>
+				<a class="link" href="{% url 'blog:detail' post.get_previous %}">Previous</a>
+				<a class="link" href="{% url 'blog:detail' post.get_next %}">Next</a>
+			</nav>
+			<hr/>
+		</div>
+</header>
+	<body>
+		<div class="container">
+			<h1 class="postTitle">{{ post.post_title }}</h1>
+			
+			{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+			
+			<div id="postContent">
+				{{ post.post_content|safe }}
+			</div>
+			{% include 'blog/buttons.html' %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+a {
+	color: green;
+	text-decoration: none;
+}
+
+body {
+	background: white;
+	font-family: helvetica;
+	/*url("images/background.gif") no-repeat*/
+}
+
+.container {
+	padding-left: 64px;
+	padding-right: 64px;
+}
+
+.pythonChallenge {
+	color: #ce1212;
+}
+
+.postTitle {
+	color: #d50000; /* or #d50, I kinda dig both */
+}
+
+.logo {
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.nav-div {
+	padding-top: 20px;
+}
+
+.link {
+	margin-right:5px;
+}
